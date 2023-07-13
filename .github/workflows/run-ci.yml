@@ -1,16 +1,19 @@
 name: CI
 
-on:
-  push:
-    branches:
-      - crawler
-      - har-file
-      - swagger
-      - brokencrystals
-  pull_request:
-    branches: [main]
-  schedule:
-    - cron: "0 0 * * THU"
+#normally you use the on push/pullrequest option per branch, but 'on dispatch' is an easy way to kick off manually.
+on: workflow_dispatch
+
+#on:
+#  push:
+#    branches:
+#      - crawler
+#      - har-file
+#      - swagger
+#      - brokencrystals
+#  pull_request:
+#    branches: [main]
+#  schedule:
+#    - cron: "0 0 * * THU"
 
 jobs:
   wait_for:
