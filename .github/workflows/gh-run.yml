@@ -1,4 +1,4 @@
-name: CI
+name: gh-run
 
 #normally you use the on push/pullrequest option per branch, but 'on dispatch' is an easy way to kick off manually.
 on: workflow_dispatch
