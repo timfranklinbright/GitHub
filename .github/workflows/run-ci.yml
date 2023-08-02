@@ -26,7 +26,7 @@ jobs:
         uses: NeuraLegion/run-scan@release
         with:
           api_token: ${{ secrets.BRIGHT_TOKEN}}
-          hostname: demo.brightsec.com
+          hostname: ${{ secrets.BRIGHT_CLUSTER}}
           name: Bright Scan - ${{ github.sha }}
           discovery_types: |
             [ "crawler" ]
@@ -37,7 +37,7 @@ jobs:
         uses: NeuraLegion/wait-for@release
         with:
           api_token:  ${{ secrets.BRIGHT_TOKEN }}
-          hostname: demo.brightsec.com
+          hostname: ${{ secrets.BRIGHT_CLUSTER}}
           scan: ${{ steps.start.outputs.id }}
           wait_for: high
           code_scanning_alerts: true
