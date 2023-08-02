@@ -29,7 +29,7 @@ jobs:
           hostname: ${{ secrets.BRIGHT_CLUSTER}}
 #          name: gh-BC - ${{ github.sha }}
           name: CICD-gh-run - ${{ github.sha }}
-          restart_scan: $SCAN_ID
+#          restart_scan: $SCAN_ID
           discovery_types: |
             [ "crawler" ]
           crawler_urls: |
