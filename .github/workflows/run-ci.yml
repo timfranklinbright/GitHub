@@ -1,4 +1,4 @@
-name: CI
+name: GH-stop
 
 #normally you use the on push/pullrequest option per branch, but 'on dispatch' is an easy way to kick off manually.
 on: workflow_dispatch
@@ -27,7 +27,7 @@ jobs:
         with:
           api_token: ${{ secrets.BRIGHT_TOKEN}}
           hostname: ${{ secrets.BRIGHT_CLUSTER}}
-          name: Bright Scan - ${{ github.sha }}
+          name: GH-Stop - ${{ github.sha }}
           discovery_types: |
             [ "crawler" ]
           crawler_urls: |
